@@ -1,9 +1,9 @@
 import unittest
-from gilded_rose import Item
+from item import Item
 
 
 class ItemTest(unittest.TestCase):
-    def testItemCreation(self):
+    def test_item_init(self):
         item = Item('test', 10, 20)
         self.assertEqual(item.days_left, 10)
 
