@@ -20,7 +20,7 @@ class AgingItemTest(unittest.TestCase):
         self.assertEqual(item.quality, 22)
 
     def test_aging_item_high_quality(self):
-        item = AgingItem('test', 0, 49)
+        item = AgingItem('aging3', 0, 49)
         item.update()
         self.assertEqual(item.days_left, 0)
         self.assertEqual(item.quality, 50)
