@@ -5,14 +5,14 @@ class StandardItem:
         self.days_left = days_left
         self.quality = quality
         self.default_quality_change = 1
-        self.expired_quality_changed = 2
+        self.expired_quality_change = 2
 
     def __repr__(self):
         return "%s, %s, %s" % (self.name, self.days_left, self.quality)
 
     def update(self):
         if self.days_left == 0:
-            self._update_quality(self.expired_quality_changed)
+            self._update_quality(self.expired_quality_change)
             return
         self.days_left -= 1
         self._update_quality(self.default_quality_change)

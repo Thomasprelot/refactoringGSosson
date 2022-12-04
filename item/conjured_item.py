@@ -2,6 +2,9 @@ from item.standard_item import StandardItem
 
 
 class ConjuredItem(StandardItem):
+    """
+      ConjuredItem quality decreases twice as fast as the standard item
+    """
     def __init__(self, name, days_left, quality):
         # test that initial value are valid inputs
         self.name = name

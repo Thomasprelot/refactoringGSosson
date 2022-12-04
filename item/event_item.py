@@ -2,14 +2,18 @@ from item.standard_item import StandardItem
 
 
 class EventItem(StandardItem):
+    """
+      EventItem quality increase differently according the days before its expiration. After this date, it drops to 0
+    """
     def __init__(self, name, days_left, quality):
         # test that initial value are valid inputs
         self.name = name
         self.days_left = days_left
         self.quality = quality
         self.default_quality_change = 1
+        # Dictionnary {Period of time: quality increase}. If the days left are between to date (a period), then the quality increases daily by the corresponding amount
         self.timed_quality = {10: 2, 5: 3}
-        self.expired_quality_changed = 0
+        self.expired_quality_change = 0
 
     def update(self):
         if self.days_left == 0:

@@ -10,7 +10,7 @@ class SulfurasItemTest(unittest.TestCase):
     def test_sulfuras_item_update_ok(self):
         item = SulfurasItem('Sulfuras', 10, 20)
         item.update()
-        self.assertEqual(item.days_left, 10)
+        self.assertEqual(item.days_left, 9)
         self.assertEqual(item.quality, 20)
 
 
