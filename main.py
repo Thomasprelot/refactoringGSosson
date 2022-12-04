@@ -1,30 +1,36 @@
 # -*- coding: utf-8 -*-
 
-from standard_item import StandardItem
+from item.standard_item import StandardItem
+from item.aging_item import AgingItem
+from item.sulfuras_item import SulfurasItem
+from item.event_item import EventItem
+from item.conjured_item import ConjuredItem
 from store import Store
 
 
-class Rose():
-    def foo(self):
+class GildedRoseStore():
+    def open_store(self):
         items = [
             StandardItem("+5 Dexterity Vest", 10, 20),
-            StandardItem("Aged Brie", 2, 0),
+            AgingItem("Aged Brie", 2, 0),
             StandardItem("Elixir of the Mongoose", 5, 7),
-            StandardItem("Sulfuras, Hand of Ragnaros", 0, 80),
-            StandardItem("Sulfuras, Hand of Ragnaros", -1, 80),
-            StandardItem("Backstage passes to a TAFKAL80ETC concert", 15, 20),
-            StandardItem("Backstage passes to a TAFKAL80ETC concert", 10, 49),
-            StandardItem("Backstage passes to a TAFKAL80ETC concert", 5, 49),
+            SulfurasItem("Sulfuras, Hand of Ragnaros", 0, 80),
+            SulfurasItem("Sulfuras, Hand of Ragnaros", -1, 80),
+            EventItem("Backstage passes to a TAFKAL80ETC concert", 15, 20),
+            EventItem("Backstage passes to a TAFKAL80ETC concert", 10, 49),
+            EventItem("Backstage passes to a TAFKAL80ETC concert", 5, 49),
             # this conjured item does not work properly yet
-            StandardItem("Conjured Mana Cake", 3, 6)
+            ConjuredItem("Conjured Mana Cake", 3, 6)
         ]
 
-        gilded_rose = Store(items)
-        gilded_rose.update_items()
-        assert items[0].name == "+5 Dexterity Vest"
-        print('ok')
+        self.store = Store(items)
+        self.pass_day()
+
+    def pass_day(self):
+        self.store.update_items()
+        print("It's a new day")
 
 
 if __name__ == '__main__':
-    gildedRose = Rose()
-    gildedRose.foo()
+    gildedRose = GildedRoseStore()
+    gildedRose.open_store()

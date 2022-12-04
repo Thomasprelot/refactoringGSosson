@@ -1,4 +1,4 @@
-from standard_item import StandardItem
+from item.standard_item import StandardItem
 
 
 class EventItem(StandardItem):
