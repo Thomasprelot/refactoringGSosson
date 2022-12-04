@@ -1,22 +1,22 @@
 # -*- coding: utf-8 -*-
 
-from item import Item
+from standard_item import StandardItem
 from store import Store
 
 
 class Rose():
     def foo(self):
         items = [
-            Item("+5 Dexterity Vest", 10, 20),
-            Item("Aged Brie", 2, 0),
-            Item("Elixir of the Mongoose", 5, 7),
-            Item("Sulfuras, Hand of Ragnaros", 0, 80),
-            Item("Sulfuras, Hand of Ragnaros", -1, 80),
-            Item("Backstage passes to a TAFKAL80ETC concert", 15, 20),
-            Item("Backstage passes to a TAFKAL80ETC concert", 10, 49),
-            Item("Backstage passes to a TAFKAL80ETC concert", 5, 49),
+            StandardItem("+5 Dexterity Vest", 10, 20),
+            StandardItem("Aged Brie", 2, 0),
+            StandardItem("Elixir of the Mongoose", 5, 7),
+            StandardItem("Sulfuras, Hand of Ragnaros", 0, 80),
+            StandardItem("Sulfuras, Hand of Ragnaros", -1, 80),
+            StandardItem("Backstage passes to a TAFKAL80ETC concert", 15, 20),
+            StandardItem("Backstage passes to a TAFKAL80ETC concert", 10, 49),
+            StandardItem("Backstage passes to a TAFKAL80ETC concert", 5, 49),
             # this conjured item does not work properly yet
-            Item("Conjured Mana Cake", 3, 6)
+            StandardItem("Conjured Mana Cake", 3, 6)
         ]
 
         gilded_rose = Store(items)
