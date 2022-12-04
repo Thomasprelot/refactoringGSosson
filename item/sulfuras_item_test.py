@@ -2,7 +2,7 @@ import unittest
 from sulfuras_item import SulfurasItem
 
 
-class ItemTest(unittest.TestCase):
+class SulfurasItemTest(unittest.TestCase):
     def test_item_init(self):
         item = SulfurasItem("Sulfuras test", -1, 20)
         self.assertEqual(item.name, "Sulfuras test")

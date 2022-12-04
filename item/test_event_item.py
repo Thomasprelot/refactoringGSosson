@@ -2,7 +2,7 @@ import unittest
 from event_item import EventItem
 
 
-class ItemTest(unittest.TestCase):
+class EventItemTest(unittest.TestCase):
     def test_item_init(self):
         item = EventItem('test', 10, 20)
         self.assertEqual(item.days_left, 10)

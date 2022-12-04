@@ -2,7 +2,7 @@ import unittest
 from aging_item import AgingItem
 
 
-class ItemTest(unittest.TestCase):
+class AgingItemTest(unittest.TestCase):
     def test_item_init(self):
         item = AgingItem('test', 10, 20)
         self.assertEqual(item.days_left, 10)
