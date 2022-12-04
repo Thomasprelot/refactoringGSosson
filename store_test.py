@@ -1,6 +1,6 @@
 import unittest
 from store import Store
-from standard_item import StandardItem
+from item.standard_item import StandardItem
 
 
 class StoreTest(unittest.TestCase):
